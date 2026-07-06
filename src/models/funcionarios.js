@@ -16,3 +16,5 @@ const Funcionario = sequelize.define("Funcionario", {
         allowNull: false
     }
 })
+
+module.exports = Funcionario

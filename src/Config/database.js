@@ -12,3 +12,11 @@ const sequelize = new Sequelize(
         logging:false
     }
 )
+
+try {
+    sequelize.authenticate()
+    console.log("Banco autenticado com sucesso!")
+} catch (error) {
+    console.log(error)
+}
+module.exports = sequelize
