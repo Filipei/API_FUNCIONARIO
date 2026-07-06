@@ -8,5 +8,5 @@ exports.cadastrar = async(req,res)=>{
 exports.listar = async(req,res)=>{
 
     const funcionarios = await Funcionario.findAll()
-    res.status(201).json(funcionariosnj)
+    res.status(201).json(funcionarios)
 }
