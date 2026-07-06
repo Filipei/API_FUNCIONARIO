@@ -5,14 +5,14 @@ const app = require("../src/app")
 describe("Api de funcionarios" , ()=>{
     it("Deve cadastrar um funcionario" , async()=>{
         const resposta = await request(app)
-        .post("funcionarios")
+        .post("/funcionarios")
         .send({
             nome: "Maria",
             cargo: "Analista"
         })
 
-        espect(resposta.statusCode.toBe(201))
-        espect(resposta.body.nome).toBe("Maria")
-        espect(resposta.body.cargo).toBe("Analista")
+        expect(resposta.statusCode).toBe(201)
+        expect(resposta.body.nome).toBe("Maria")
+        expect(resposta.body.cargo).toBe("Analista")
     })
 })
