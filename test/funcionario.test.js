@@ -1,6 +1,6 @@
 const request = require("supertest")
 
-const app = require("../app")
+const app = require("../src/app")
 
 describe("Api de funcionarios" , ()=>{
     it("Deve cadastrar um funcionario" , async()=>{
